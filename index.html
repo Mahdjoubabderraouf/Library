@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Library</title>
+</head>
+
+<body>
+    <div class="content">
+        <header>
+            <h1>My Library</h1>
+        </header>
+        <main>
+            <div class="books-operations">
+                <h2>My Books</h2>
+                <button id="add">Add Book</button>
+                <button id="un-read">Read / Unread</button>
+                <button id="remove">Remove</button>
+            </div>
+            <div class="table-container">
+                <div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="2">ID</th>
+                                <th>Title</th>
+                                <th>Author</th>
+                                <th>Pages</th>
+                                <th>Read</th>
+                                <th>Remove</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr>
+                                <td><input type="checkbox" checked></td>
+                                <td>1</td>
+                                <td>Book 1</td>
+                                <td>Author 1</td>
+                                <td>100</td>
+                                <td><button>Read</button></td>
+                                <td><button>Remove</button></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" checked></td>
+                                <td>2</td>
+                                <td>Book 2</td>
+                                <td>Author 2</td>
+                                <td>200</td>
+                                <td><button>Read</button></td>
+                                <td><button>Remove</button></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" checked></td>
+                                <td>3</td>
+                                <td>Book 3</td>
+                                <td>Author 2</td>
+                                <td>200</td>
+                                <td><button>Read</button></td>
+                                <td><button>Remove</button></td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <dialog>
+                <form id="form">
+                    <input type="text" id="title" placeholder="Title" required>
+                    <input type="text" id="author" placeholder="Author" required>
+                    <input type="number" id="pages" placeholder="Pages" required>
+                    <input type="checkbox" id="read" required>
+                    <label for="read">Read</label>
+                    <button type="submit">Add</button>
+                </form>
+            </dialog>
+        </main>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

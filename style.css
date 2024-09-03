@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Comic Neue", sans-serif;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.content {
+  max-width: 50rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-inline: auto;
+  height: 100%;
+}
+
+header {
+  background-color: #141414;
+  width: 100vw;
+  padding: 2rem;
+  color: #f1f1f1;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  flex: 1;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.books-operations {
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+  h2 {
+    text-align: center;
+    flex: 1;
+    font-size: 1.7rem;
+    font-weight: 700;
+  }
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  button {
+    background-color: #f1f1f1;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    font-family: "Comic Neue", sans-serif;
+    font-weight: 700;
+    border: none;
+  }
+}
+
+.table-container {
+  padding: 1rem;
+  margin: 1rem 0;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  th,
+  td {
+    padding: 0.5rem;
+    text-align: center;
+  }
+  th {
+    padding: 0.8rem;
+  }
+  th:first-child {
+    border-radius: 1rem 0 0 0;
+  }
+  th:last-child {
+    border-radius: 0 1rem 0 0;
+  }
+  tr:last-child {
+    td:first-child {
+      border-radius: 0 0 0 1rem;
+    }
+    td:last-child {
+      border-radius: 0 0 1rem 0;
+    }
+  }
+
+  tr:has(th) {
+    background-color: #141414;
+    color: #f1f1f1;
+  }
+  tr:nth-child(even) {
+    background-color: #f1f1f1;
+  }
+
+  tr:nth-child(odd):not(:has(th)) {
+    background-color: #ddd;
+  }
+  tr:not(:has(th)):hover {
+    background-color: #5f5f5f;
+  }
+  button {
+    background-color: #666666;
+    color: #f1f1f1;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    font-family: "Comic Neue", sans-serif;
+    font-weight: 700;
+    border: none;
+  }
+}
