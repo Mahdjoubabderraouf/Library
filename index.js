@@ -27,7 +27,7 @@ const remove = document.getElementById("remove");
 const read = document.getElementById("read");
 const notYet = document.getElementById("not-yet");
 
-// add event listeners
+/*************************Events Listeners*************************/
 
 // hundel submit form
 submitDialog.addEventListener("click", (event) => {
@@ -51,8 +51,6 @@ submitDialog.addEventListener("click", (event) => {
   dialoge.close();
 });
 
-/*************************Events Listeners*************************/
-
 // close dialog for X button
 closeDialog.addEventListener("click", (closeDialog) => {
   dialoge.close();
@@ -65,6 +63,20 @@ addButtonOpenDialog.addEventListener("click", (addBookToLibrary) => {
 remove.addEventListener("click", () => operation("delete"));
 read.addEventListener("click", () => operation("read"));
 notYet.addEventListener("click", () => operation("not-yet"));
+
+// close the selected row when click outside the table
+
+document.addEventListener("click", (event) => {
+  const table = document.querySelector("table");
+  if (!table.contains(event.target)) {
+    const rows = table.querySelectorAll("tr.selected");
+    rows.forEach((row) => {
+      row.classList.remove("selected");
+      const checkbox = row.querySelector(".select-row");
+      if (checkbox) checkbox.checked = false;
+    });
+  }
+});
 
 /***************************Functions******************************/
 
@@ -109,11 +121,11 @@ function addBookToLibrary(index, title, author, pages, bookStatus) {
     event.stopPropagation();
     if (readButton.classList.contains("read")) {
       readButton.textContent = "Not yet";
-      readButton.className = "not-yet";
+      readButton.className = "status not-yet";
       myLibrary[row.rowIndex - 1].read = false;
     } else {
       readButton.textContent = "Read";
-      readButton.className = "read";
+      readButton.className = "status read";
       myLibrary[row.rowIndex - 1].read = true;
     }
   });
