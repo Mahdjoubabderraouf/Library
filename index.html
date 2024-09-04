@@ -17,66 +17,42 @@
             <div class="books-operations">
                 <h2>My Books</h2>
                 <button id="add">Add Book</button>
-                <button id="un-read">Read / Unread</button>
+                <button id="read">Read</button>
+                <button id="not-yet">Not Yet</button>
                 <button id="remove">Remove</button>
             </div>
             <div class="table-container">
-                <div>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th colspan="2">ID</th>
-                                <th>Title</th>
-                                <th>Author</th>
-                                <th>Pages</th>
-                                <th>Read</th>
-                                <th>Remove</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-
-                            <tr>
-                                <td><input type="checkbox" checked></td>
-                                <td>1</td>
-                                <td>Book 1</td>
-                                <td>Author 1</td>
-                                <td>100</td>
-                                <td><button>Read</button></td>
-                                <td><button>Remove</button></td>
-                            </tr>
-                            <tr>
-                                <td><input type="checkbox" checked></td>
-                                <td>2</td>
-                                <td>Book 2</td>
-                                <td>Author 2</td>
-                                <td>200</td>
-                                <td><button>Read</button></td>
-                                <td><button>Remove</button></td>
-                            </tr>
-                            <tr>
-                                <td><input type="checkbox" checked></td>
-                                <td>3</td>
-                                <td>Book 3</td>
-                                <td>Author 2</td>
-                                <td>200</td>
-                                <td><button>Read</button></td>
-                                <td><button>Remove</button></td>
-                            </tr>
-
-
-                        </tbody>
-                    </table>
-                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2">ID</th>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Pages</th>
+                            <th>Read</th>
+                            <th>Remove</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
             </div>
             <dialog>
-                <form id="form">
+                <div id="form">
+                    <button id="close">X</button>
+                    <h3>Add Book</h3>
+                    <legend>all fields are required</legend>
                     <input type="text" id="title" placeholder="Title" required>
                     <input type="text" id="author" placeholder="Author" required>
                     <input type="number" id="pages" placeholder="Pages" required>
-                    <input type="checkbox" id="read" required>
-                    <label for="read">Read</label>
-                    <button type="submit">Add</button>
-                </form>
+                    <div>
+                        <legend>Did you read this book?</legend>
+                        <input type="radio" name="read" id="yes" value="yes" required checked>
+                        <label for="yes">yes</label>
+                        <input type="radio" name="read" id="no" value="no" required>
+                        <label for="no">no</label>
+                    </div>
+                    <button type="submit" id="submit">Add</button>
+                </div>
             </dialog>
         </main>
     </div>
