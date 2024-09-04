@@ -111,9 +111,11 @@ table {
 
   tr:nth-child(even) {
     background: #f1f1f1;
+    cursor: pointer;
   }
   tr:nth-child(odd):not(:has(th)) {
     background: #ddd;
+    cursor: pointer;
   }
 
   .selected {
